@@ -1,0 +1,8 @@
+<tbody>
+<tr ng-repeat=" row in rows " ng-click="selectRow(row)"  ng-style="row.style">
+    <td ng-repeat=" col in columns " ng-show="col.visible">
+        <div ng-show="col.colDef.render"  ng-bind-html="col.columnRender()" ng-click="col.colDef.renderClick(row.entity)"></div>
+        <div ng-show="!col.colDef.render"  ng-bind="$eval( row.getQualifiedColField( col ))"></div>
+    </td>
+</tr>
+</tbody>

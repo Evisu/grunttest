@@ -1,0 +1,30 @@
+<div class="pagelist">
+
+
+    <ul class="pagination  pull-left ">
+        <li class="{{webPage.curPage == 1 ? 'disabled' : ''}}"><a title="上一页" href="#" class="{{webPage.curPage == 1 ? 'disabled' : ''}}" ng-click="lastPage();">&laquo;</a></li>
+
+        <li  ng-if="webPage.curPage > webPage.pageNum">
+            <a title="更多页" href="#" ng-click="webPage.lastPage('...');">...</a>
+        </li>
+        <li class="{{webPage.curPage == page ? 'active' : ''}}"  ng-repeat="page in webPage.pageTotal">
+            <a title="{{'第'+page+'页'}}" href="#" ng-click="webPage.clickPage(page);">{{page}}</a>
+        </li>
+        <li  ng-if="webPage.pageMax < webPage.pageTotalNum">
+            <a title="更多页" href="#" ng-click="webPage.nextPage('...');">...</a>
+        </li>
+        <li class="{{webPage.curPage == webPage.pageTotalNum ? 'disabled' : ''}}"><a title="下一页" href="#" ng-click="webPage.nextPage();">&raquo;</a></li>
+    </ul>
+    <div class="page_num  pull-left dropdown">
+        每页 <div dir="ltr" class="num-info dropdown-toggle" data-toggle="dropdown">{{webPage.limit}}</div>条； 共  <span>{{webPage.pageTotalNum}}</span>  页 <span>{{webPage.total}}</span> 条记录
+        <ul class="dropdown-menu num-sel" role="menu">
+            <li><a href="#" ng-click="webPage.changePage(1);">1</a></li>
+            <li><a href="#" ng-click="webPage.changePage(5);">5</a></li>
+            <li><a href="#" ng-click="webPage.changePage(10);">10</a></li>
+            <li><a href="#" ng-click="webPage.changePage(20);">20</a></li>
+            <li><a href="#" ng-click="webPage.changePage(30);">30</a></li>
+        </ul>
+
+
+    </div>
+</div>

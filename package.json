@@ -1,0 +1,31 @@
+{
+  "name": "ui-bootstrap",
+  "version": "1.0.0",
+  "description": "https://github.com/hxkinggil/AngularBootStrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hxkinggil/AngularBootStrap.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "gc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hxkinggil/AngularBootStrap/issues"
+  },
+  "homepage": "https://github.com/hxkinggil/AngularBootStrap",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "0.5.x",
+    "grunt-contrib-uglify": "0.5.x",
+    "grunt-contrib-watch": "~0.5.0",
+    "grunt-html2js": "~0.2.0",
+    "grunt-contrib-jshint":"0.10.0",
+    "node-markdown": "0.1.1"
+  }
+}
